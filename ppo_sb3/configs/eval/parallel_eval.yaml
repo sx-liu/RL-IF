@@ -1,0 +1,3 @@
+eval_n_envs: 16
+step_size: 50
+n_eval_episodes: 32

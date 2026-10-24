@@ -1,0 +1,10 @@
+method: TracIn
+target_model: "initial"
+
+drop_percentile: 2.5
+discard_mode: "neg-bottom"
+order: "fixed"
+group_by: "none"
+
+target_buffer: "sample"
+target_rollout_size: 128

@@ -1,0 +1,16 @@
+training_config:
+  env_name: BipedalWalker-v3
+  experiment_name: baseline_kl1.0
+  experiment_type: training
+  n_envs: 1
+  total_rollouts: 250
+  rollout_begin: 0
+  rollout_end: 150
+  cache_grad: True
+  clear_cache: True
+
+ppo_config: configs/ppo/bipedalwalker.yaml
+ppo_override:
+  kl_coef: 1.0
+
+eval_config: configs/eval/parallel_eval_100_episodes.yaml

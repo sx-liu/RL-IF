@@ -1,0 +1,18 @@
+policy_type: "MlpPolicy"
+
+total_timesteps: 2048000
+n_epochs: 10
+n_steps: 8192
+
+batch_size: 64
+learning_rate: 1.0e-4
+final_learning_rate: null
+features_dim: null
+
+gamma: 0.99
+ent_coef: 0.0
+clip_range: 10000.0
+kl_coef: 1.0
+normalize_advantage: true
+
+optimizer_class: "Adam"

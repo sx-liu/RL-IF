@@ -1,0 +1,20 @@
+training_config:
+  env_name: BipedalWalker-v3
+  experiment_name: rlif_opt_h5_kl1.0
+  experiment_type: training
+  data_selection_method: global
+  cache_grad: false
+  n_envs: 1
+  total_rollouts: 250
+  rollout_begin: 0
+  rollout_end: 150
+  clear_cache: true
+
+ppo_config: configs/ppo/bipedalwalker.yaml
+
+attribution_config: configs/attribution/rlif_opt_x5.0.yaml
+attribution_override:
+  step_size: 5
+
+
+eval_config: configs/eval/parallel_eval_100_episodes.yaml

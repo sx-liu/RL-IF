@@ -1,0 +1,22 @@
+training_config:
+  env_name: LunarLander-v2
+  experiment_name: rlif_opt_h5_kl0.5
+  experiment_type: training
+  data_selection_method: global
+  n_envs: 1
+  cache_grad: true
+  clear_cache: true
+  total_rollouts: 1000
+  rollout_begin: 0
+  rollout_end: 500
+
+ppo_config: configs/ppo/lunarlander.yaml
+ppo_override:
+  kl_coef: 0.5
+
+attribution_config: configs/attribution/rlif_opt_x10.0_h4.yaml
+attribution_override:
+  step_size: 5
+
+eval_config: configs/eval/parallel_eval_step_5.yaml
+

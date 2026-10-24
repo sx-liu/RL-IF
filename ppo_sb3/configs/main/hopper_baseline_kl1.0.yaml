@@ -1,0 +1,16 @@
+training_config:
+  env_name: Hopper-v4
+  experiment_name: baseline_kl1.0
+  experiment_type: training
+  n_envs: 8
+  total_rollouts: 500
+  rollout_begin: 0
+  rollout_end: 500
+
+
+
+ppo_config: configs/ppo/hopper.yaml
+
+eval_config: configs/eval/parallel_eval.yaml
+eval_override:
+  step_size: 1

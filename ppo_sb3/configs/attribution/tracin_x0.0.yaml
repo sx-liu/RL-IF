@@ -1,0 +1,7 @@
+method: TracIn
+target_model: "initial"
+
+drop_percentile: 0.0
+discard_mode: "neg-bottom"
+order: "fixed"
+group_by: "none"

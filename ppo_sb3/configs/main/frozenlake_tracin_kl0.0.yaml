@@ -1,0 +1,16 @@
+training_config:
+  env_name: FrozenLake-v1
+  experiment_name: tracin_kl0.0
+  experiment_type: training
+  data_selection_method: local
+  n_envs: 1
+  cache_grad: true
+  total_rollouts: 50
+  rollout_begin: 0
+  rollout_end: 50
+
+ppo_config: configs/ppo/frozenlake.yaml
+ppo_override:
+  kl_coef: 0.0
+
+attribution_config: configs/attribution/tracin.yaml

@@ -1,0 +1,8 @@
+method: RLIF-opt
+target_model: "final"
+step_size: 2
+
+drop_percentile: 10.0
+discard_mode: "neg-bottom"
+order: "fixed"
+group_by: "none"

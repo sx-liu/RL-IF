@@ -1,0 +1,12 @@
+training_config:
+  env_name: FrozenLake-v1
+  experiment_name: baseline_kl0.0
+  n_envs: 1
+  cache_grad: true
+  total_rollouts: 50
+  rollout_begin: 0
+  rollout_end: 20
+
+ppo_config: configs/ppo/frozenlake.yaml
+ppo_override:
+  kl_coef: 0.0

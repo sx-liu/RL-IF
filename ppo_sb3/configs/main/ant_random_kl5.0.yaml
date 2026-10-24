@@ -1,0 +1,23 @@
+training_config:
+  env_name: Ant-v4
+  experiment_name: random_kl5.0
+  experiment_type: training
+  data_selection_method: local
+  n_envs: 8
+  total_rollouts: 1000
+  rollout_begin: 0
+  rollout_end: 1000
+  clear_cache: true
+
+
+ppo_config: configs/ppo/ant.yaml
+ppo_override:
+  kl_coef: 5.0
+
+attribution_config: configs/attribution/random.yaml
+attribution_override:
+  drop_percentile: 10.0
+
+eval_config: configs/eval/parallel_eval.yaml
+eval_override:
+  step_size: 5

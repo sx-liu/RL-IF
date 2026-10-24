@@ -1,0 +1,20 @@
+training_config:
+  env_name: Hopper-v4
+  experiment_name: tracin_kl1.0
+  experiment_type: training
+  data_selection_method: local
+  n_envs: 8
+  total_rollouts: 500
+  rollout_begin: 0
+  rollout_end: 500
+  clear_cache: true
+
+ppo_config: configs/ppo/hopper.yaml
+ppo_override:
+  kl_coef: 1.0
+
+attribution_config: configs/attribution/tracin_x10.0.yaml
+
+eval_config: configs/eval/parallel_eval.yaml
+eval_override:
+  step_size: 1
